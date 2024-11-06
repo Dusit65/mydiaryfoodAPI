@@ -93,7 +93,7 @@ class DiaryFood
         $stmt->bindParam(":foodLat", $this->foodLat);
         $stmt->bindParam(":foodLng", $this->foodLng);
         $stmt->bindParam(":memId", $this->memId);
-        $stmt->execute();
+ 
 
         //สั่งsqlให้ทำงาน
         if ($stmt->execute()) {
