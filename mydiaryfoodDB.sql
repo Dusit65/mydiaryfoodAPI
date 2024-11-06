@@ -34,7 +34,7 @@ CREATE TABLE `diaryfood_tb` (
   `foodLng` double DEFAULT NULL,
   `memId` int(11) NOT NULL,
   PRIMARY KEY (`foodId`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `diaryfood_tb` (
 --
 
 /*!40000 ALTER TABLE `diaryfood_tb` DISABLE KEYS */;
-INSERT INTO `diaryfood_tb` VALUES (1,'HachibanRamen1',1,'img1.png',100,'14 มกราคม 2567','ราชบุรี',13.705244313587219,100.34898557447546,1),(2,'KFC',2,'img2.png',200,'14 กุมภาพันธ์ 2567','พัทลุง',13.722538222228469,100.206087283468,1),(3,'Omakese',3,'img3.png',300,'14 มีนาคม 2567','ยะลา',13.750038778489262,100.49285679147368,2),(4,'Mixue',4,'img4.png',35,'14 เมษายน 2567','กรุงเทพ',14,15,2),(5,'MK',3,'img5.png',500,'14 พฤษภาคม 2567','พังงา',13,10,1);
+INSERT INTO `diaryfood_tb` VALUES (2,'KFC',3,'img2.png',200,'16 พฤษภาคม 2567','กาฬสินธุ์',13.722538222228,100.20608728347,1),(3,'Omakese',3,'img3.png',300,'14 มีนาคม 2567','ยะลา',13.750038778489262,100.49285679147368,2),(5,'MK',3,'img5.png',500,'16 พฤศจิกายน 2567','พังงา',13,10,1),(58,'MeowMeowHa?',4,'pic_672b2a7114d2d_1730882161085.jpg',50,'3 มิถุนายน 2567','ปทุมธานี',13.7076312,100.3569129,1);
 /*!40000 ALTER TABLE `diaryfood_tb` ENABLE KEYS */;
 
 --
@@ -58,9 +58,10 @@ CREATE TABLE `member_tb` (
   `memEmail` varchar(100) NOT NULL,
   `memUsername` varchar(50) NOT NULL,
   `memPassword` varchar(50) NOT NULL,
-  `memAge` int(11) DEFAULT NULL,
+  `memAge` int(11) NOT NULL,
+  `memImage` varchar(100) NOT NULL,
   PRIMARY KEY (`memId`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +69,7 @@ CREATE TABLE `member_tb` (
 --
 
 /*!40000 ALTER TABLE `member_tb` DISABLE KEYS */;
-INSERT INTO `member_tb` VALUES (1,'ดุสิต ภักดีคุณากร','dusit@mail.com','ds','1',10),(2,'ดุสิต ภักดีคุณากร','nkm72@gmail.com','nkm','1',20);
+INSERT INTO `member_tb` VALUES (1,'ดุสิต ภักดีคุณากร','dusit@mail.com','ds','1',10,'img2.png'),(2,'ดุสิต ภักดีคุณากร','nkm72@gmail.com','nkm','1',20,'img1.png'),(8,'neko meow','Neko@mail.com','neko','1',5,'pic_672b31b820f08_1730884024135.jpg');
 /*!40000 ALTER TABLE `member_tb` ENABLE KEYS */;
 
 --
@@ -84,4 +85,4 @@ INSERT INTO `member_tb` VALUES (1,'ดุสิต ภักดีคุณา�
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-05 20:44:07
+-- Dump completed on 2024-11-06 16:38:23
