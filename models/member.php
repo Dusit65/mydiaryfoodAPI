@@ -11,6 +11,7 @@ class Member
     public $memUsername;
     public $memPassword;
     public $memAge;
+    public $memImage;
     //ตัวแปรสารพัดประโยชน์
     public $message;
 
@@ -49,15 +50,16 @@ class Member
     {
         //ตัวแปรคำสั่งsql
         $strSQL = "INSERT INTO member_tb
-        (memFullName,memEmail,memUsername,memPassword,memAge) 
+        (memFullName,memEmail,memUsername,memPassword,memAge,memImage) 
         VALUES
-        (:memFullName,:memEmail,:memUsername,:memPassword,:memAge)";
+        (:memFullName,:memEmail,:memUsername,:memPassword,:memAge,:memImage)";
         
     $this->memFullName = htmlspecialchars(strip_tags($this->memFullName));
     $this->memEmail = htmlspecialchars(strip_tags($this->memEmail));
     $this->memUsername = htmlspecialchars(strip_tags($this->memUsername));
     $this->memPassword = htmlspecialchars(strip_tags($this->memPassword));
     $this->memAge = intval(htmlspecialchars(strip_tags($this->memAge)));
+    $this->memImage = htmlspecialchars(strip_tags($this->memImage));
 
     //สร้างตัวแปรสที่ใช้ทำงานกับคำสั่งsql
     $stmt = $this->connDB->prepare($strSQL);
@@ -69,6 +71,7 @@ class Member
     $stmt->bindParam(":memUsername", $this->memUsername);
     $stmt->bindParam(":memPassword", $this->memPassword);
     $stmt->bindParam(":memAge", $this->memAge);
+    $stmt->bindParam(":memImage", $this->memImage);
 
     //สั่งsqlให้ทำงาน
     if ($stmt->execute()) {

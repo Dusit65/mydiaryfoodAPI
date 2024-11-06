@@ -34,7 +34,9 @@ if($result->rowCount() > 0){
         "memEmail"=>$memEmail,
         "memUsername"=>$memUsername,
         "memPassword"=>$memPassword,
-        "memAge"=>strval($memAge)
+        "memAge"=>strval($memAge),
+        "memImage"=>$memImage
+
     );
     echo json_encode($resultArray, JSON_UNESCAPED_UNICODE);
     // echo json_encode(array("message" => "ชื่อผู้ใช้งานและรหัสผ่านถูกต้อง"));
