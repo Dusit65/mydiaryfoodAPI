@@ -145,7 +145,7 @@ class DiaryFood
         $this->foodLat = htmlspecialchars(strip_tags($this->foodLat));
         $this->foodLng = htmlspecialchars(strip_tags($this->foodLng));
         $this->memId = intval(htmlspecialchars(strip_tags($this->memId)));
-
+//=====================================================================================================
         $stmt = $this->connDB->prepare($strSQL);
 
         $stmt->bindParam(":foodId", $this->foodId);
